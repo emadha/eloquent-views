@@ -2,7 +2,7 @@
 <p align="center">
 <a href="https://packagist.org/packages/emadha/eloquent-views"><img src="https://poser.pugx.org/emadha/eloquent-views/d/total.svg" alt="Total Downloads"></a>
 <a href="https://packagist.org/packages/emadha/eloquent-views"><img src="https://poser.pugx.org/emadha/eloquent-views/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/emadha/eloquent-views"><img src="https://poser.pugx.org/emadha/eloquent-views/license.svg" alt="License"></a>
+<a href="https://github.com/emadha/eloquent-views/blob/master/License.md"><img src="https://poser.pugx.org/emadha/eloquent-views/license.svg" alt="License"></a>
 </p>
 A Composer Package to add views to eloquent models
 
