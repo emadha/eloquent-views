@@ -1,0 +1,29 @@
+{
+  "name": "emadha/eloquent-views",
+  "description": "A Laravel Composer Package which attaches views to Eloquent Models, making it easier to render models views",
+  "type": "library",
+  "require": {
+    "laravel/framework": "~5.8.0|^6.0|^7.0",
+    "php": "^7"
+  },
+  "autoload": {
+    "psr-4": {
+      "EmadHa\\EloquentViews\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "EmadHa\\EloquentViews\\ServiceProvider"
+      ]
+    }
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Emad Ha",
+      "email": "emad.haa@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev"
+}
