@@ -4,11 +4,15 @@
 <a href="https://packagist.org/packages/emadha/eloquent-views"><img src="https://poser.pugx.org/emadha/eloquent-views/v/stable.svg" alt="Latest Stable Version"></a>
 <a href="https://github.com/emadha/eloquent-views/blob/master/License.md"><img src="https://poser.pugx.org/emadha/eloquent-views/license.svg" alt="License"></a>
 </p>
-A Composer Package to add views to eloquent models
+
+*A Composer Package to attach a render method to eloquent models.*
+
+I find it easier to render models views using a single line of code like `model->render('view');` instead of going to controller, or having it inside a `@include` in blade, or by using multiple lines of code to achieve that.
+With this package, you can easily do so.
 
 ## Requirements
 
-This package requires Laravel 5.8 or higher, PHP 7.2 or higher and a database that supports `json` fields and MySQL compatible functions.
+This package requires Laravel 5.8 or higher, PHP 7.2 or higher.
 
 ## Installation
 
@@ -25,10 +29,27 @@ You can publish the config with:
 ``` bash
 php artisan vendor:publish --provider="EmadHa\EloquentViews\ServiceProvider" --tag="config"
 ```
-
+The config file has the root diretory of the eloquent views
+```php
+<?php
+return [
+    /**
+     * The root directory of Eloquent views path in resources
+     * by default it's using /resources/eloquent/{model name}
+     */
+    'path' => 'eloquent',
+];
+```
 ## Usage
 Adding `HasEloquentViews` trait to your **eloquent** models is all you need to start using this package.
 
+```php
+...
+class Post extends Model {
+   use \EmadHa\EloquentViews\HasEloquentViews;
+   ...
+}
+```
 The views directory structure is like this: `resources/views/eloquent/{model}/{view}` where *eloquent* is defined in the config file and *model* is your lowercase model class e.g. `post` and the *view* is the view you request to render.
 
 Example:
