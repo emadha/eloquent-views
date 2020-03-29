@@ -1,5 +1,6 @@
 <?php namespace EmadHa\EloquentViews;
 
+
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
 
@@ -10,9 +11,15 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
      */
     public function boot()
     {
+        # Adds config to publish list
         $this->publishes([
             __DIR__ . '/../config/eloquent-views.php' => config_path('eloquent-views.php'),
         ], 'config');
+
+        # Attach commands
+        $this->commands([
+            Commands\CreateView::class
+        ]);
     }
 
     /**
