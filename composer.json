@@ -3,7 +3,7 @@
   "description": "A Laravel Composer Package which attaches views to Eloquent Models, making it easier to render models views",
   "type": "library",
   "require": {
-    "laravel/framework": "~5.8.0|^6.0|^7.0|^8.0",
+    "laravel/framework": "~5.8.0|^6.0|^7.0|^8.0|^9.0",
     "php": "^7|^8.0"
   },
   "autoload": {
